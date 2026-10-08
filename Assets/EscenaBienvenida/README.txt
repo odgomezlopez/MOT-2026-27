@@ -1,0 +1,1 @@
+https://polyhaven.com/a/stained_pine
