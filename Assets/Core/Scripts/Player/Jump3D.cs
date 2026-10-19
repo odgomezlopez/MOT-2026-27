@@ -27,7 +27,7 @@ public class Jump3D : MonoBehaviour
     {
         if(jump.triggered && groundCheck.IsGrounded())
         {
-            jumpPressed = true;
+            jumpPressed = jump.triggered;//true;
         }
     }
 

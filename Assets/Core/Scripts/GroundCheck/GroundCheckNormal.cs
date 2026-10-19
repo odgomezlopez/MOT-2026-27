@@ -8,7 +8,7 @@ public class GroundCheckNormal : MonoBehaviour
 
     //Capa sobre la cual se puede saltar
     [SerializeField] private float groundCheckDistance = 0.1f;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] public LayerMask groundLayer;
 
     // Update is called once per frame
     void Update()
