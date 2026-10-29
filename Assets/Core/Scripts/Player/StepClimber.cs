@@ -8,7 +8,6 @@ public class StepClimber : MonoBehaviour
     GroundCheckNormal groundCheck;
 
     //Variables
-
     [SerializeField] float stepHeight = 0.3f;    // el escalón más alto
     [SerializeField] float stepUp = 0.1f;        // cuánto sube cada vez
     [SerializeField] float rayLength = 0.6f;     // radio de la cápsula + 0,1
