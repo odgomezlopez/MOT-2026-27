@@ -30,7 +30,7 @@ public class AnimatorPlayerConnector : MonoBehaviour
         if (speed > runThreshold) animator.SetFloat("Velocity", 2.1f);         //Correr
         else if (speed > walkThreshold) animator.SetFloat("Velocity", 1.1f); //Andar
         else animator.SetFloat("Velocity", 0f); //IDLE
-      
+        //animator.SetFloat("Velocity", speed); //IDLE
 
         animator.SetBool("IsGrounded", groundCheck.IsGrounded());
 
