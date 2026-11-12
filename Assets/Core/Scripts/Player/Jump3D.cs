@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Jump3D : MonoBehaviour
@@ -12,6 +13,7 @@ public class Jump3D : MonoBehaviour
     private Rigidbody rb;
     private GroundCheckNormal groundCheck;
 
+    [SerializeField] UnityEvent OnJump;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +37,7 @@ public class Jump3D : MonoBehaviour
     {
         if (jumpPressed)
         {
+            OnJump.Invoke();
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpPressed = false;
         }
