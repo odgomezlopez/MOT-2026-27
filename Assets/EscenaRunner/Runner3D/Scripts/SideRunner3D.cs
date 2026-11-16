@@ -8,6 +8,7 @@ public class SideRunner3D : MonoBehaviour
     [SerializeField, Min(0f)] private float maxSpeed = 100f;
     [SerializeField] private float currentSpeed = 0f;
 
+    [SerializeField] float penalty = 0f;
 
     [SerializeField] private Vector3 direction = Vector3.forward;
 
@@ -20,10 +21,15 @@ public class SideRunner3D : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public void IncreaseSpeed(float multiplier)
+    {
+        penalty += currentSpeed*multiplier;
+    }
+
     private void FixedUpdate()
     {
         //Calculamos el movimiento del jugador en la dirección especificada y con la velocidad definida
-        currentSpeed = initialSpeed + (DistanceManager.Instance.Distance * increaseSpeedPerMeter);
+        currentSpeed = initialSpeed + (DistanceManager.Instance.Distance * increaseSpeedPerMeter) + penalty;
         if(currentSpeed > maxSpeed) currentSpeed = maxSpeed;
         //currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
 
