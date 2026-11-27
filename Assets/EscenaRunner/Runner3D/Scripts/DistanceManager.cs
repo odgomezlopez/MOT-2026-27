@@ -22,4 +22,13 @@ public class DistanceManager : Singleton<DistanceManager>
     {
         distance = player.position.z - initialPositionPlayer.z;
     }
+
+    private void OnDestroy()
+    {
+        string key = "Distance";
+
+        float oldDistance = PlayerPrefs.GetFloat(key, 0f);
+        if(distance > oldDistance)
+            PlayerPrefs.SetFloat(key, distance);
+    }
 }

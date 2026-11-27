@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/EscenaRunner/Runner3D.unity
+    guid: 50d906aaa0bf3654cb1601b8ab52a50f
+  - enabled: 1
     path: Assets/Scenes/EscenaBienvenida.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
